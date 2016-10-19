@@ -30,14 +30,17 @@ public class PlayerController : MonoBehaviour {
 
         // If the jump button is pressed and the player is grounded then the player should jump.
         if (Input.GetButtonDown("Jump") && grounded)
-            jump = true;
+        {
+            //anim.SetBool("Ground", grounded);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
     }
 
 
     void FixedUpdate()
     {
         //anim.SetBool("Ground", grounded);
-
+        //anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
         float move = Input.GetAxisRaw("Horizontal");
 
