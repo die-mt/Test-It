@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour {
     public bool facingRight = true;			// For determining which way the player is currently facing.
     [HideInInspector]
     public bool jump = false;				// Condition for whether the player should jump.
+    //private bool escaleras = false;
+    private bool doubleJump = true;
+    private bool flashing = false;
 
     public float maxSpeed = 10f;
 
@@ -13,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 
     private Transform groundCheck;			// A position marking where to check if the player is grounded.
     private bool grounded = false;			// Whether or not the player is grounded.
+    private Vector3 moveDirection;
     //private Animator anim;					// Reference to the player's animator component.
 
 
@@ -29,10 +33,36 @@ public class PlayerController : MonoBehaviour {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         // If the jump button is pressed and the player is grounded then the player should jump.
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            //anim.SetBool("Ground", grounded);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            if (grounded)
+            {
+                //anim.SetBool("Ground", grounded);
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            }
+            else
+            {
+                if (doubleJump)
+                {
+                    //flashing = true;
+                    /*GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                    GetComponent<Rigidbody2D>().isKinematic = false;
+                        Vector3 currentPosition = transform.position;
+                        Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        moveDirection = moveToward - currentPosition;
+                        moveDirection.z = 0;
+                        moveDirection.Normalize();
+                        Vector3 target = moveDirection * 400 + currentPosition;
+                    if (Input.GetButtonUp("Jump"))
+                    {
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x, target.y*3));
+                    }*/
+                }
+
+
+                /*if (doubleJump && !grounded)
+                    doubleJump = false;*/
+            }
         }
     }
 
@@ -43,10 +73,44 @@ public class PlayerController : MonoBehaviour {
         //anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
         float move = Input.GetAxisRaw("Horizontal");
+        //float v = Input.GetAxisRaw("Vertical");
 
+        if (grounded)
+        {
+            doubleJump = true;
+            flashing = false;
+        }
         //animation.SetFloat("Speed", Mathf.Abs(move));
+        /*if (!escaleras)
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        else
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, v * maxSpeed);*/
+        print(doubleJump);
+        if (/*!flashing && */doubleJump)
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        else
+        {
+            if (Input.GetButton("Jump"))
+            {
+                //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                GetComponent<Rigidbody2D>().isKinematic = true;
+            }
+            if (Input.GetButtonUp("Jump"))
+            {
+                flashing = true;
+                GetComponent<Rigidbody2D>().isKinematic = false;
+                Vector3 currentPosition = transform.position;
+                Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                moveDirection = moveToward - currentPosition;
+                moveDirection.z = 0;
+                moveDirection.Normalize();
+                Vector3 target = moveDirection * 400 + currentPosition;
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x, target.y * 3));
+            }
+            flashing = false;
+            doubleJump = false;
+        }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
         if (move > 0 && !facingRight)
             Flip();
@@ -66,23 +130,21 @@ public class PlayerController : MonoBehaviour {
         transform.localScale = theScale;
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.CompareTag("Stairs") /*&& Input.GetButtonDown("Vertical")*/)
-        /*{
-            print("Estoy subiendo");
-            float v = Input.GetAxis("Vertical");
-
-            if (v * GetComponent<Rigidbody2D>().velocity.y < maxSpeed)
-                // ... add a force to the player.
-                GetComponent<Rigidbody2D>().AddForce(Vector2.up * v * moveForce);
-
-            if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y) > maxSpeed)
-                // ... set the player's velocity to the maxSpeed in the x axis.
-                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, Mathf.Sign(GetComponent<Rigidbody2D>().velocity.y) * maxSpeed);
-        }*/
-
-
-
+        if (other.CompareTag("Stairs"))
+        {
+            escaleras = true;
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Stairs"))
+        {
+            escaleras = false;
+            GetComponent<Rigidbody2D>().isKinematic = false;
+        }
+    }*/
 }
