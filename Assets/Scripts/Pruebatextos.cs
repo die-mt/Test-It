@@ -8,6 +8,7 @@ public class Pruebatextos : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Desarrollador.text = "Me huele  el pito a canela";
+
     }
 	
 	// Update is called once per frame
