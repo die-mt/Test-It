@@ -3,19 +3,21 @@ using System.Collections;
 
 public class BasicEnemyBehaviour : MonoBehaviour {
 
+
     public float MaxSpeedHorizontal = 5f;
     public float MaxSpeedVertical = 10f;
 
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private int Direction=-1;
+    private GameObject Controlador;
 
 
     private Rigidbody2D cuerpo;
 
     // Use this for initialization
     void Start () {
+        Controlador = GameObject.Find("Controller");
         cuerpo = GetComponent<Rigidbody2D>();
-        //Destroy(this.gameObject, 5);
     }
 	
     void FixedUpdate()
@@ -32,6 +34,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
         {
             other.GetComponent<Rigidbody2D>().velocity=(new Vector2(0, 100));
             print("salta!");
+            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
         }
         if (other.tag == "ground" || other.tag== "Enemy" )
         {
