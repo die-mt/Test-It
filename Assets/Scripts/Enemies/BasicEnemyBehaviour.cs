@@ -32,7 +32,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
         if (other.tag == "Player")
         {
-            other.GetComponent<Rigidbody2D>().velocity=(new Vector2(0, 100));
+            other.GetComponent<Rigidbody2D>().velocity=(new Vector2(0, 50));
             print("salta!");
             Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
         }
