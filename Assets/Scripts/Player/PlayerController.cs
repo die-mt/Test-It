@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour {
     public bool facingRight = true;			// For determining which way the player is currently facing.
     [HideInInspector]
     public bool jump = false;				// Condition for whether the player should jump.
+    //[HideInInspector]
+    public int lives = 2;
     //private bool escaleras = false;
     private bool secondJump = true;
-    private bool flashing = false;
+    private bool flashing = false; 
     private bool initTimer = false;
     private bool getButtonDowmJump = false;
     private bool getButtonUpJump = false;
@@ -21,7 +23,9 @@ public class PlayerController : MonoBehaviour {
     private float energy;
 
     private Transform groundCheck;			// A position marking where to check if the player is grounded.
+    private Transform groundCheck1;
     private bool grounded = false;			// Whether or not the player is grounded.
+    private bool aproximacionRompible = false;  //Para detectar cuando se acerca al bloque rompible.
     private Vector3 moveDirection;
     //private Animator anim;					// Reference to the player's animator component.
 
@@ -30,13 +34,15 @@ public class PlayerController : MonoBehaviour {
     {
         // Setting up references.
         groundCheck = transform.Find("groundCheck");
+        groundCheck1 = transform.Find("groundCheck1");
         //anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Ground"));
+        aproximacionRompible = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Rompible")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Rompible"));
 
         if (Input.GetButtonDown("Jump"))
             getButtonDowmJump = true;
@@ -66,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-        if (grounded)
+        if (grounded || aproximacionRompible)
         {
             if (getButtonDowmJump)
             {
@@ -75,9 +81,9 @@ public class PlayerController : MonoBehaviour {
                 getButtonUpJump = false;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
             }
-            if (flashing)
+            if (flashing && !aproximacionRompible)
                 flashing = false;
-            if (!secondJump)
+            if (!secondJump && !aproximacionRompible)
                 secondJump = true;
         }
         else
@@ -142,16 +148,26 @@ public class PlayerController : MonoBehaviour {
         transform.localScale = theScale;
     }
 
-    /*void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Stairs"))
+        if (other.CompareTag("Interrogacion"))
         {
-            escaleras = true;
-            GetComponent<Rigidbody2D>().isKinematic = true;
+            if (lives != 0) lives--;
+            else Destroy(this);
+        }
+        if (flashing)
+        {
+            if (other.CompareTag("Rompible"))
+            {
+                print("eeeeyyycuboo");
+                Destroy(other);
+            }
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    public bool Flashing { get { return flashing; } }
+
+    /*void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Stairs"))
         {

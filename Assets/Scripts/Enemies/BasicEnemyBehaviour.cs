@@ -32,11 +32,18 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
         if (other.tag == "Player")
         {
-            other.GetComponent<Rigidbody2D>().velocity=(new Vector2(0, 50));
-            print("salta!");
-            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
+            if (other.GetComponent<PlayerController>().Flashing)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 50));
+                print("salta!");
+                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
+            }
         }
-        if (other.tag == "ground" || other.tag== "Enemy" )
+        if (other.tag == "ground" || other.tag == "Enemy" || other.tag == "Rompible")
         {
             Flip(); 
         }
