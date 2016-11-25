@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour {
     public Transform Enemigo;
     public Transform PosSpawn;
 
-    private float tiempoEntreSpawn = 2;
-    private float tiempoUltimoSpawn = 0;
+    public float tiempoEntreSpawn = 2;
+    public float tiempoUltimoSpawn = 0;
 
 
 	// Update is called once per frame

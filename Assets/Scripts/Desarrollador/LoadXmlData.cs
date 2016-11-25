@@ -14,15 +14,10 @@ public class LoadXmlData : MonoBehaviour // the Class
     public Text text;
     public Image bubble;
 
-    static string Cube_Character = "";
-    static string Cylinder_Character = "";
-    static string Capsule_Character = "";
-    static string Sphere_Character = "";
-
     string lvlName = "";
     string tutorial = "";
 
-
+    private bool speaking = false; 
     List<Dictionary<string, string>> levels = new List<Dictionary<string, string>>();
     Dictionary<string, string> obj;
 
@@ -66,8 +61,8 @@ public class LoadXmlData : MonoBehaviour // the Class
                     {
                         case "Salto": obj.Add("Salto", levelsItens.InnerText); break; // put this in the dictionary.
                         case "Enemigo": obj.Add("Enemigo", levelsItens.InnerText); break; // put this in the dictionary.
-                        case "Capsule": obj.Add("Capsule", levelsItens.InnerText); break; // put this in the dictionary.
-                        case "Sphere": obj.Add("Sphere", levelsItens.InnerText); break; // put this in the dictionary.
+                        case "CajaFalsa": obj.Add("CajaFalsa", levelsItens.InnerText); break; // put this in the dictionary.
+                        case "Snake": obj.Add("Snake", levelsItens.InnerText); break;
                     }
                 }
 
@@ -80,29 +75,30 @@ public class LoadXmlData : MonoBehaviour // the Class
         }
     }
 
-    /*public void Escribe(int actualLevel, string key)
-    {
-        levels[actualLevel - 1].TryGetValue(key, out lvlName);
-            
-        text.text = lvlName.ToString();
-        print(text.text);
-
-    }*/
     public void Escribe(int actualLevel, string key, int TiempoDelMensaje)
     {
-    levels[actualLevel - 1].TryGetValue(key, out lvlName);
+        if (speaking)
+        {
+            text.CrossFadeAlpha(1, 0.001f, false);
+            bubble.GetComponent<Image>().CrossFadeAlpha(1,0.001f, false);
+        }
+        speaking = true;
+        levels[actualLevel - 1].TryGetValue(key, out lvlName);
         bubble.enabled = true;
-    text.text = lvlName.ToString();
-    print(text.text);
-    GetComponent<Temporizador>().MarcaTiempos(TiempoDelMensaje);
-
-
+        text.text = lvlName.ToString();
+        print(text.text);
+        GetComponent<Temporizador>().MarcaTiempos(TiempoDelMensaje);
+        text.CrossFadeAlpha(0.005f, TiempoDelMensaje + 0.01f, false);
+        bubble.GetComponent<Image>().CrossFadeAlpha(0.005f, TiempoDelMensaje+0.01f, false);
     }
 
     public void Borra()
     {
         text.text = "";
         bubble.enabled = false;
+        text.CrossFadeAlpha(1, 1, false);
+        bubble.GetComponent<Image>().CrossFadeAlpha(1, 1, false);
+        speaking = false;
     }
 }
 

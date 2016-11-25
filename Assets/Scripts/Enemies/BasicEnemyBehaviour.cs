@@ -43,7 +43,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
                 Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
             }
         }
-        if (other.tag == "ground" || other.tag == "Enemy" || other.tag == "Rompible")
+        if (other.tag == "Enemy" || other.tag == "Rompible")
         {
             Flip(); 
         }

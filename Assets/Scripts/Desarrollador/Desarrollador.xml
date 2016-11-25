@@ -5,17 +5,16 @@
     <coleccionable>Vaya, has cogido un coleccionable.Disfrutalo! No sirve para nada.Es lo que tienen las betas</coleccionable>
     <object name="Salto"> Salta sin paraaaar </object>
     <object name="Enemigo"> A volar! Ser inmortal tiene sus contras</object>
-    <object name="Capsule"> Hi, I'm a Capsule! (xml) </object>
-    <object name="Sphere"> Hi, I'm a Sphere! (xml)</object>
+    <object name="CajaFalsa">Ups, no debería de hacer eso...La culpa es del motor del juego!</object>
+    <object name="Snake">Snake? Snake! SNAAAAAAAA AKEEEEEEEE!</object>
     <finaltext>Very Good! (xml)</finaltext>
   </level>
   <level>
     <name>Level 2 (xml)</name>
-    <tutorial>Try comes close to all four objects, again. (xml)</tutorial>
-    <object name="Cube"> Hi, I'm a cube in the level 2! (xml)</object>
-    <object name="Cylinder"> Hi, I'm a Cylinder in the level 2! (xml)</object>
-    <object name="Capsule"> Hi, I'm a Capsule in the level 2! (xml)</object>
-    <object name="Sphere"> Hi, I'm a Sphere in the level 2! (xml)</object>
+    <introduccion>Este es el segundo nivel que hice. Se nota la mejora, eh?</introduccion>
+    <coleccionable>Vaya, has cogido un coleccionable.Disfrutalo! No sirve para nada.Es lo que tienen las betas</coleccionable>
+    <object name="Salto"> Salta sin paraaaar </object>
+    <object name="Enemigo"> A volar! Ser inmortal tiene sus contras</object>
     <finaltext>Congratulations! (xml)</finaltext>
   </level>
 </levels>

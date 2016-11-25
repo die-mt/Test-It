@@ -8,17 +8,18 @@ public class PlayerController : MonoBehaviour {
     public bool jump = false;				// Condition for whether the player should jump.
     //[HideInInspector]
     public int lives = 2;
+
+    public float maxSpeed = 10f;
+
+    public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+
+
     //private bool escaleras = false;
     private bool secondJump = true;
     private bool flashing = false; 
     private bool initTimer = false;
     private bool getButtonDowmJump = false;
     private bool getButtonUpJump = false;
-
-
-    public float maxSpeed = 10f;
-
-    public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 
     private float energy;
 
@@ -27,6 +28,9 @@ public class PlayerController : MonoBehaviour {
     private bool grounded = false;			// Whether or not the player is grounded.
     private bool aproximacionRompible = false;  //Para detectar cuando se acerca al bloque rompible.
     private Vector3 moveDirection;
+
+    private GameObject Controlador;
+
     //private Animator anim;					// Reference to the player's animator component.
 
 
@@ -35,6 +39,7 @@ public class PlayerController : MonoBehaviour {
         // Setting up references.
         groundCheck = transform.Find("groundCheck");
         groundCheck1 = transform.Find("groundCheck1");
+        Controlador = GameObject.Find("Controller");
         //anim = GetComponent<Animator>();
     }
 
@@ -152,8 +157,16 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.CompareTag("Interrogacion"))
         {
-            if (lives != 0) lives--;
-            else Destroy(this);
+            if (lives != 0)
+            {
+                Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 3);
+                lives--;
+            }
+            else
+            {
+                Destroy(this);
+                Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5);
+            }
         }
         if (flashing)
         {
