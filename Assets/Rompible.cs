@@ -13,12 +13,12 @@ public class Rompible : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter2D(Collider2D other) {
+    /*void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player"){
             if (other.GetComponent<PlayerController>().Flashing) // añadir .tag
             {
                 Destroy(this.gameObject);
             }
         }
-    }
+    }*/
 }
