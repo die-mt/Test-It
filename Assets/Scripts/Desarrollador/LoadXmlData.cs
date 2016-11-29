@@ -59,11 +59,12 @@ public class LoadXmlData : MonoBehaviour // the Class
                 {
                     switch (levelsItens.Attributes["name"].Value)
                     {
-                        case "Salto": obj.Add("Salto", levelsItens.InnerText); break; // put this in the dictionary.
+                        case "Mexican": obj.Add("Mexican", levelsItens.InnerText); break; // put this in the dictionary.
                         case "Enemigo": obj.Add("Enemigo", levelsItens.InnerText); break; // put this in the dictionary.
                         case "CajaFalsa": obj.Add("CajaFalsa", levelsItens.InnerText); break; // put this in the dictionary.
                         case "Snake": obj.Add("Snake", levelsItens.InnerText); break;
                         case "Puzzle": obj.Add("Puzzle", levelsItens.InnerText); break;
+                        case "Bug": obj.Add("Bug", levelsItens.InnerText); break;
                     }
                 }
 

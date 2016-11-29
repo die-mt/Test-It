@@ -163,17 +163,22 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Interrogacion"))
+        if (other.CompareTag("Interrogacion") /*|| other.CompareTag("Enemy")*/)
         {
             if (lives != 0)
             {
-                Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 3);
                 lives--;
+                Controlador.GetComponent<Controller>().QuitaVida();
+                if (other.CompareTag("Interrogacion"))
+                    Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 5);
+                //if (other.CompareTag("Enemy"))
+                    //Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
             }
             else
             {
                 //Destroy(this);
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");
                 Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5);
             }
         }

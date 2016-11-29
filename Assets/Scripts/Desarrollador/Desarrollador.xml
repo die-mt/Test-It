@@ -3,12 +3,13 @@
     <name>Level 1 (xml)</name>
     <introduccion>Bienvenido a la early try de Test-it.Nos pillas en los huesos!</introduccion>
     <coleccionable>Vaya, has cogido un coleccionable.Disfrutalo! No sirve para nada.Es lo que tienen las betas</coleccionable>
-    <object name="Salto"> Salta sin paraaaar </object>
-    <object name="Enemigo"> A volar! Ser inmortal tiene sus contras</object>
+    <object name="Mexican"> *prit* Achievemt Unlocked: Mexican Immigrant! </object>
+    <object name="Enemigo"> En la cara!</object>
     <object name="CajaFalsa">Ups, no debería de hacer eso...La culpa es del motor del juego!</object>
     <object name="Snake">Snake? Snake! SNAAAAAAAA AKEEEEEEEE!</object>
     <object name="Puzzle">Bien! Has Hecho un puzzle para noobs!</object>
-    <finaltext>Very Good! (xml)</finaltext>
+    <object name="Bug">Joer, vaya pedazo de bug... Digooo... Scripted Event!</object>
+    <finaltext>dsadasda</finaltext>
   </level>
   <level>
     <name>Level 2 (xml)</name>
