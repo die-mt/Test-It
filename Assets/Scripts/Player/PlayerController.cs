@@ -15,13 +15,14 @@ public class PlayerController : MonoBehaviour {
 
 
     //private bool escaleras = false;
-    private bool secondJump = true;
-    private bool flashing = false; 
-    private bool initTimer = false;
+    private bool secondJump = true; //Verdadero si puede hacer el salto flash. Para evitar que lo haga varias veces seguidas
+    private bool flashing = false;  //Verdadero si está haciendo el salto flash
+    private bool initTimer = false; 
     private bool getButtonDowmJump = false;
     private bool getButtonUpJump = false;
 
     private float energy;
+    private int rompibleCount=0;
 
     private Transform groundCheck;			// A position marking where to check if the player is grounded.
     private Transform groundCheck1;
@@ -86,10 +87,15 @@ public class PlayerController : MonoBehaviour {
                 getButtonUpJump = false;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
             }
-            if (flashing && !aproximacionRompible)
+            if (flashing && !aproximacionRompible) //Cuando alcanza el suelo despues de salto flash
+            {
                 flashing = false;
+                rompibleCount = 0;
+            }
             if (!secondJump && !aproximacionRompible)
+            {
                 secondJump = true;
+            }
         }
         else
         {
@@ -107,23 +113,25 @@ public class PlayerController : MonoBehaviour {
                 if (getButtonUpJump && flashing)
                 {
                     getButtonDowmJump = false;
-                    getButtonUpJump = false;
+                    getButtonUpJump = false;    //Nada que ver con las físicas, sirve para controlar estados.
                     initTimer = false;
-                    GetComponent<Rigidbody2D>().isKinematic = false;
-                    Vector3 currentPosition = transform.position;
-                    Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    moveDirection = moveToward - currentPosition;
-                    moveDirection.z = 0;
-                    moveDirection.Normalize();
-                    Vector3 target = moveDirection * 400 + currentPosition;
-                    if (energy > 1.5f)
+                    GetComponent<Rigidbody2D>().isKinematic = false;    //Quita las físicas del motor al objeto.
+                    Vector3 ajuste=new Vector3(15, 0, 0);   //Vector ajuste para pruebas.
+                    Vector3 currentPosition = transform.position /*- ajuste*/;   //Posicion del objeto.
+                    currentPosition.z = 0;
+                    Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //Posicion del raton
+                    moveDirection = moveToward - currentPosition; //Vector que va desde la posicion del objeto hasta el raton
+                    moveDirection.z = 0;    //Ponemos a cero el z
+                    moveDirection.Normalize();  //Normalizamos el vector
+                    Vector3 target = moveDirection * 400; //Multiplicamos el modulo por la fuerza que le pondremos
+                    if (energy > 1.5f)  //Ponemos limites a la energia
                         energy = 1.5f;
                     if (energy < 0.7f)
                         energy = 0.7f;
                     //print(energy);
-                    print(target.x);
-                    print(target.y);
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x * energy, target.y * 3 *energy));
+                    print("X: " + target.x);
+                    print("Y: " + target.y);
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x * energy, target.y * 3 * energy)); //Metemos la juerza en la direccion del 
                     energy = 0f;
                     secondJump = false;
                 }
@@ -131,7 +139,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (initTimer)
-            energy += Time.deltaTime;
+            energy += Time.deltaTime*4;
 
 
 
@@ -164,7 +172,8 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                Destroy(this);
+                //Destroy(this);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
                 Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5);
             }
         }
@@ -172,8 +181,21 @@ public class PlayerController : MonoBehaviour {
         {
             if (other.CompareTag("Rompible"))
             {
-                print("eeeeyyycuboo");
-                Destroy(other);
+                if (rompibleCount<2)
+                {
+                    Destroy(other.gameObject);
+                    rompibleCount++;
+                    print(rompibleCount);
+                }
+                else
+                {
+                    if (aproximacionRompible)
+                    {
+                        flashing = false;
+                        secondJump = true;
+                        rompibleCount = 0;
+                    }
+                }
             }
         }
     }
