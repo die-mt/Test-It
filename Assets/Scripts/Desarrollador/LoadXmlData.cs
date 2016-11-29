@@ -15,7 +15,7 @@ public class LoadXmlData : MonoBehaviour // the Class
     public Image bubble;
 
     string lvlName = "";
-    string tutorial = "";
+   // string tutorial = "";
 
     private bool speaking = false; 
     List<Dictionary<string, string>> levels = new List<Dictionary<string, string>>();
@@ -63,6 +63,7 @@ public class LoadXmlData : MonoBehaviour // the Class
                         case "Enemigo": obj.Add("Enemigo", levelsItens.InnerText); break; // put this in the dictionary.
                         case "CajaFalsa": obj.Add("CajaFalsa", levelsItens.InnerText); break; // put this in the dictionary.
                         case "Snake": obj.Add("Snake", levelsItens.InnerText); break;
+                        case "Puzzle": obj.Add("Puzzle", levelsItens.InnerText); break;
                     }
                 }
 

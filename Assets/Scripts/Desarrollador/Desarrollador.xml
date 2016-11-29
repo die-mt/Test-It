@@ -7,6 +7,7 @@
     <object name="Enemigo"> A volar! Ser inmortal tiene sus contras</object>
     <object name="CajaFalsa">Ups, no debería de hacer eso...La culpa es del motor del juego!</object>
     <object name="Snake">Snake? Snake! SNAAAAAAAA AKEEEEEEEE!</object>
+    <object name="Puzzle">Bien! Has Hecho un puzzle para noobs!</object>
     <finaltext>Very Good! (xml)</finaltext>
   </level>
   <level>

@@ -1,0 +1,24 @@
+<!DOCTYPE spritesheets>
+<spritesheets>
+ <spritesheet resolution="ipad" name="sheet_Top" filename="spriteSheets/sheet_Top-ipad.png">
+  <sprite scaleY="1.99992" angleDegrees="-14.7185" rect="957,0,1011,1179" offsetX="29.0717" offsetY="2.2741" name="17-Cuerpo-1_Cuarpo_Pinguino_Cuerpo_Pinguino.png" scaleX="1.99992"/>
+  <sprite scaleY="1.99992" angleDegrees="5.04245" rect="702,0,255,309" offsetX="-76.826" offsetY="-15.638" name="17-Cuerpo-1_manita_front_linea_manita.png" scaleX="1.99992"/>
+  <sprite scaleY="1.99992" angleDegrees="-43.8912" rect="402,0,300,301" offsetX="-28.2359" offsetY="408.047" name="17-Cuerpo-1_cara_1_Cara_1_linea.png" scaleX="1.99992"/>
+  <sprite scaleY="1.99992" angleDegrees="7.0165" rect="346,0,56,101" offsetX="-82.9613" offsetY="-423.151" name="18-F_PataPierna-1.png" scaleX="1.99992"/>
+  <sprite scaleY="1.99992" angleDegrees="0" rect="0,0,346,99" offsetX="-245.121" offsetY="-450.53" name="17-Cuerpo-1_pata_front_pie_front.png" scaleX="1.99992"/>
+ </spritesheet>
+ <spritesheet resolution="iphone" name="sheet_Top" filename="spriteSheets/sheet_Top-iphone.png">
+  <sprite scaleY="4.2665" angleDegrees="-14.6902" rect="471,0,480,559" offsetX="13.6268" offsetY="1.07272" name="17-Cuerpo-1_Cuarpo_Pinguino_Cuerpo_Pinguino.png" scaleX="4.2665"/>
+  <sprite scaleY="4.2665" angleDegrees="4.57392" rect="347,0,124,150" offsetX="-36.0709" offsetY="-7.03559" name="17-Cuerpo-1_manita_front_linea_manita.png" scaleX="4.2665"/>
+  <sprite scaleY="4.2665" angleDegrees="-44.1815" rect="200,0,147,147" offsetX="-12.2661" offsetY="191.337" name="17-Cuerpo-1_cara_1_Cara_1_linea.png" scaleX="4.2665"/>
+  <sprite scaleY="4.2665" angleDegrees="6.34019" rect="168,0,32,53" offsetX="-40.989" offsetY="-197.93" name="18-F_PataPierna-1.png" scaleX="4.2665"/>
+  <sprite scaleY="4.2665" angleDegrees="0" rect="0,0,168,52" offsetX="-114.9" offsetY="-211.186" name="17-Cuerpo-1_pata_front_pie_front.png" scaleX="4.2665"/>
+ </spritesheet>
+ <spritesheet resolution="iphone-retina" name="sheet_Top" filename="spriteSheets/sheet_Top-iphone-retina.png">
+  <sprite scaleY="1.80275" angleDegrees="-14.6983" rect="673,108,1120,1306" offsetX="32.2505" offsetY="2.53419" name="17-Cuerpo-1_Cuarpo_Pinguino_Cuerpo_Pinguino.png" scaleX="1.80275"/>
+  <sprite scaleY="1.80275" angleDegrees="4.96974" rect="392,108,281,341" offsetX="-85.2507" offsetY="-17.2402" name="17-Cuerpo-1_manita_front_linea_manita.png" scaleX="1.80275"/>
+  <sprite scaleY="1.80275" angleDegrees="-43.989" rect="60,108,332,333" offsetX="-30.5514" offsetY="452.73" name="17-Cuerpo-1_cara_1_Cara_1_linea.png" scaleX="1.80275"/>
+  <sprite scaleY="1.80275" angleDegrees="7.12502" rect="0,108,60,110" offsetX="-91.2362" offsetY="-469.579" name="18-F_PataPierna-1.png" scaleX="1.80275"/>
+  <sprite scaleY="1.80275" angleDegrees="0" rect="1411,0,382,108" offsetX="-271.931" offsetY="-499.806" name="17-Cuerpo-1_pata_front_pie_front.png" scaleX="1.80275"/>
+ </spritesheet>
+</spritesheets>

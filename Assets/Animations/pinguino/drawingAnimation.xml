@@ -1,0 +1,19 @@
+<drawingAnimations>
+ <drawingAnimation spritesheet="sheet_Top" name="pinguino_Top">
+  <drawing node="Cuerpo" name="17-Cuerpo">
+   <drw frame="1" repeat="20" name="17-Cuerpo-1_Cuarpo_Pinguino_Cuerpo_Pinguino.png"/>
+  </drawing>
+  <drawing node="Cara" name="17-Cuerpo">
+   <drw frame="1" repeat="20" name="17-Cuerpo-1_cara_1_Cara_1_linea.png"/>
+  </drawing>
+  <drawing node="F_Manita" name="17-Cuerpo">
+   <drw frame="1" repeat="20" name="17-Cuerpo-1_manita_front_linea_manita.png"/>
+  </drawing>
+  <drawing node="F_PataPierna" name="18-F_PataPierna">
+   <drw frame="1" repeat="20" name="18-F_PataPierna-1.png"/>
+  </drawing>
+  <drawing node="F_Pata" name="17-Cuerpo">
+   <drw frame="1" repeat="20" name="17-Cuerpo-1_pata_front_pie_front.png"/>
+  </drawing>
+ </drawingAnimation>
+</drawingAnimations>

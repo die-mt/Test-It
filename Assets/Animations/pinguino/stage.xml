@@ -1,0 +1,5 @@
+<stages>
+ <stage name="pinguino_pinguino">
+  <play drawingAnimation="pinguino_Top" name="Top" skeleton="Top" animation="pinguino_Top"/>
+ </stage>
+</stages>

@@ -1,0 +1,20 @@
+<skeletons>
+ <skeleton name="Top">
+  <nodes>
+   <peg id="0" name="Cuerpo"/>
+   <read id="1" name="Cara"/>
+   <read id="2" name="F_Manita"/>
+   <read id="3" name="Cuerpo"/>
+   <read id="4" name="F_PataPierna"/>
+   <read id="5" name="F_Pata"/>
+  </nodes>
+  <links>
+   <link in="Top" out="0"/>
+   <link in="0" out="1"/>
+   <link in="0" out="2"/>
+   <link in="Top" out="3"/>
+   <link in="3" out="4"/>
+   <link in="4" out="5"/>
+  </links>
+ </skeleton>
+</skeletons>
