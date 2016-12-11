@@ -13,13 +13,15 @@ public class PlayerController : MonoBehaviour {
 
     public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 
-
     //private bool escaleras = false;
     private bool secondJump = true; //Verdadero si puede hacer el salto flash. Para evitar que lo haga varias veces seguidas
     private bool flashing = false;  //Verdadero si está haciendo el salto flash
     private bool initTimer = false; 
     private bool getButtonDowmJump = false;
     private bool getButtonUpJump = false;
+    private bool flashRoto=false;
+    private bool plataformaCambiada = false;
+    private bool gamePaused;
 
     private float energy;
     private int rompibleCount=0;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 moveDirection;
 
     private GameObject Controlador;
+    private GameObject paused;
 
     //private Animator anim;					// Reference to the player's animator component.
 
@@ -41,19 +44,24 @@ public class PlayerController : MonoBehaviour {
         groundCheck = transform.Find("groundCheck");
         groundCheck1 = transform.Find("groundCheck1");
         Controlador = GameObject.Find("Controller");
+        paused = GameObject.Find("Canvas");
         //anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Ground"));
-        aproximacionRompible = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Rompible")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Rompible"));
+        gamePaused = paused.GetComponent<pauseScript>().gamePaused;
+        if (!gamePaused)
+        {
+            // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+            grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Ground"));
+            aproximacionRompible = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Rompible")) || Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Rompible"));
 
-        if (Input.GetButtonDown("Jump"))
-            getButtonDowmJump = true;
-        if (Input.GetButtonUp("Jump"))
-            getButtonUpJump = true;
+            if (Input.GetButtonDown("Jump"))
+                getButtonDowmJump = true;
+            if (Input.GetButtonUp("Jump"))
+                getButtonUpJump = true;
+        }
     }
 
 
@@ -96,6 +104,11 @@ public class PlayerController : MonoBehaviour {
             {
                 secondJump = true;
             }
+
+            if (flashRoto)
+            {
+                flashRoto = false;
+            }
         }
         else
         {
@@ -116,23 +129,40 @@ public class PlayerController : MonoBehaviour {
                     getButtonUpJump = false;    //Nada que ver con las físicas, sirve para controlar estados.
                     initTimer = false;
                     GetComponent<Rigidbody2D>().isKinematic = false;    //Quita las físicas del motor al objeto.
-                    Vector3 ajuste=new Vector3(15, 0, 0);   //Vector ajuste para pruebas.
+                    Vector3 ajuste = new Vector3(15, 0, 0);   //Vector ajuste para pruebas.
                     Vector3 currentPosition = transform.position /*- ajuste*/;   //Posicion del objeto.
                     currentPosition.z = 0;
-                    Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //Posicion del raton
-                    moveDirection = moveToward - currentPosition; //Vector que va desde la posicion del objeto hasta el raton
-                    moveDirection.z = 0;    //Ponemos a cero el z
-                    moveDirection.Normalize();  //Normalizamos el vector
-                    Vector3 target = moveDirection * 400; //Multiplicamos el modulo por la fuerza que le pondremos
-                    if (energy > 1.5f)  //Ponemos limites a la energia
-                        energy = 1.5f;
-                    if (energy < 0.7f)
-                        energy = 0.7f;
-                    //print(energy);
-                    print("X: " + target.x);
-                    print("Y: " + target.y);
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x * energy, target.y * 3 * energy)); //Metemos la juerza en la direccion del 
-                    energy = 0f;
+                    if (!flashRoto)
+                    {
+                        Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //Posicion del raton
+                        moveDirection = moveToward - currentPosition; //Vector que va desde la posicion del objeto hasta el raton
+                        moveDirection.z = 0;    //Ponemos a cero el z
+                        moveDirection.Normalize();  //Normalizamos el vector
+                        Vector3 target = moveDirection * 400; //Multiplicamos el modulo por la fuerza que le pondremos
+                        if (energy > 1.5f)  //Ponemos limites a la energia
+                            energy = 1.5f;
+                        if (energy < 0.7f)
+                            energy = 0.7f;
+                        //print(energy);
+                        print("X: " + target.x);
+                        print("Y: " + target.y);
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x * energy, target.y * 3 * energy)); //Metemos la juerza en la direccion del 
+                        energy = 0f;
+                        
+                    }
+                    else
+                    {
+                        Vector3 moveToward = GameObject.Find("Platform (7)").transform.position;   //Posicion del raton
+                        moveDirection = moveToward - currentPosition; //Vector que va desde la posicion del objeto hasta el raton
+                        moveDirection.z = 0;    //Ponemos a cero el z
+                        moveDirection.Normalize();  //Normalizamos el vector
+                        Vector3 target = moveDirection * 6000; //Multiplicamos el modulo por la fuerza que le pondremos
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x, target.y));
+                        GameObject plataforma = GameObject.Find("Platform (7)");
+                        plataforma = GameObject.Find("Cueva");
+                        plataformaCambiada = true;
+                        Destroy(GameObject.Find("Platform (7)"));
+                    }
                     secondJump = false;
                 }
             }
@@ -141,7 +171,7 @@ public class PlayerController : MonoBehaviour {
         if (initTimer)
             energy += Time.deltaTime*4;
 
-
+        print(flashRoto);
 
         if (move > 0 && !facingRight)
             Flip();
@@ -182,6 +212,7 @@ public class PlayerController : MonoBehaviour {
                 Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5);
             }
         }
+
         if (flashing)
         {
             if (other.CompareTag("Rompible"))
@@ -205,7 +236,24 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("FlashRoto") && !grounded)
+        {
+            flashRoto = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("FlashRoto") && plataformaCambiada)
+        {
+            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Bug", 7);
+            Destroy(other.gameObject);
+        }
+    } 
     public bool Flashing { get { return flashing; } }
+
 
     /*void OnTriggerExit2D(Collider2D other)
     {
