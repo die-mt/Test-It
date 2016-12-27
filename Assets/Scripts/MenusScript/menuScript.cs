@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class menuScript : MonoBehaviour {
 
@@ -16,7 +16,8 @@ public class menuScript : MonoBehaviour {
     public Image RedDot;
 
 
-    public bool ScreenOff;
+    private bool ScreenOff;
+    private bool WasEnabled;
     public AudioClip Clack;
     public AudioClip Click;
     // Use this for initialization
@@ -37,6 +38,8 @@ public class menuScript : MonoBehaviour {
         MonitorOff.enabled = false;
         RedDot.enabled = false;
 
+        WasEnabled = false;
+
 	}
 
     public void ExitPress()
@@ -46,7 +49,7 @@ public class menuScript : MonoBehaviour {
         instructions.enabled = false;
         options.enabled = false;
         exitText.enabled = false;
-        AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+        ClickSound();
     }
 
     public void NoPress()
@@ -56,18 +59,18 @@ public class menuScript : MonoBehaviour {
         instructions.enabled = true;
         options.enabled = true;
         exitText.enabled = true;
-        AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+        ClickSound();
     }
 
     public void StartLevel()
     {
-        AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+        ClickSound();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");
     }
 
     public void ExitGame() 
     {
-        AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+        ClickSound();
         Application.Quit();
     }
 
@@ -84,8 +87,14 @@ public class menuScript : MonoBehaviour {
             MonitorOff.enabled = false;
             RedDot.enabled = false;
             GreenDot.enabled = true;
-            AudioSource.PlayClipAtPoint(Clack, Camera.main.transform.position);
+            ClackSound();
             print("encendido");
+
+            if (WasEnabled)
+            {
+                quitMenu.enabled = true;
+                WasEnabled = false;
+            }
         }
         else//apago monitor
         {
@@ -98,8 +107,22 @@ public class menuScript : MonoBehaviour {
             MonitorOff.enabled = true;
             RedDot.enabled = true;
             GreenDot.enabled = false;
-            AudioSource.PlayClipAtPoint(Clack, Camera.main.transform.position);
+            ClackSound();
             print("Apagado");
+            if (quitMenu.enabled)
+            {
+                quitMenu.enabled = false;
+                WasEnabled = true;
+            }
         }
+    }
+    public void ClickSound()
+    {
+        AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+    }
+
+    public void ClackSound()
+    {
+        AudioSource.PlayClipAtPoint(Clack, Camera.main.transform.position);
     }
 }
