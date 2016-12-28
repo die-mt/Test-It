@@ -230,6 +230,7 @@ public class PlayerController : MonoBehaviour {
                         flashing = false;
                         secondJump = true;
                         rompibleCount = 0;
+                        //GetComponent<Rigidbody2D>().isKinematic = false;  Puesto para intentar arreglar el problema con los bloques lilas, no ayudaba en nada 
                     }
                 }
             }
