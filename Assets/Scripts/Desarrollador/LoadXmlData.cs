@@ -13,6 +13,8 @@ public class LoadXmlData : MonoBehaviour // the Class
     public GameObject Controller;
     public Text text;
     public Image bubble;
+    public Transform Deidadpos;
+    public float smoothLerp=1;
 
     string lvlName = "";
    // string tutorial = "";
@@ -21,10 +23,17 @@ public class LoadXmlData : MonoBehaviour // the Class
     List<Dictionary<string, string>> levels = new List<Dictionary<string, string>>();
     Dictionary<string, string> obj;
 
+    private static int xbaseCanvas = 120;
+    private static int ybaseCanvas = 40;
+
+    Vector3 posfinal;
+    private float LerpX;
+    private float LerpY;
+    private bool moving;
+
     void Awake()
     { //Timeline of the Level creator
         GetLevel();
-       
     }
 
     public void GetLevel()
@@ -77,7 +86,7 @@ public class LoadXmlData : MonoBehaviour // the Class
         }
     }
 
-    public void Escribe(int actualLevel, string key, int TiempoDelMensaje)
+    public void Escribe(int actualLevel, string key, int TiempoDelMensaje, float FadeTime)
     {
         if (speaking)
         {
@@ -89,10 +98,15 @@ public class LoadXmlData : MonoBehaviour // the Class
         bubble.enabled = true;
         text.text = lvlName.ToString();
         print(text.text);
-        GetComponent<Temporizador>().MarcaTiempos(TiempoDelMensaje);
-        text.CrossFadeAlpha(0.005f, TiempoDelMensaje + 0.01f, false);
-        bubble.GetComponent<Image>().CrossFadeAlpha(0.005f, TiempoDelMensaje+0.01f, false);
+        GetComponent<Temporizador>().MarcaTiempos(TiempoDelMensaje,FadeTime);
     }
+
+    public void Fade(float FadeTime)
+    {
+        text.CrossFadeAlpha(0.005f, FadeTime + 0.01f, false);
+        bubble.GetComponent<Image>().CrossFadeAlpha(0.005f, FadeTime + 0.01f, false);
+    }
+
 
     public void Borra()
     {
@@ -101,6 +115,34 @@ public class LoadXmlData : MonoBehaviour // the Class
         text.CrossFadeAlpha(1, 1, false);
         bubble.GetComponent<Image>().CrossFadeAlpha(1, 1, false);
         speaking = false;
+    }
+
+    public void MueveDeidad(float posx, float posy) //(0,0) del canvas=(-840,-500). He hecho un "cambio de base" y ahora el 0.0 mandado equivale al del canvas. CUIDADO que el pivote de los objetos está en el centro
+    {
+        Deidadpos.position = new Vector3(posx+xbaseCanvas, posy+ybaseCanvas, transform.position.z);
+    }
+
+    public void DeslizaDeidad(float posx, float posy)
+    {
+        LerpX = posx;
+        LerpY = posy;
+        posfinal = new Vector3(posx + xbaseCanvas, posy + ybaseCanvas, transform.position.z);
+        moving = true;
+        
+        Deidadpos.position = Vector3.Lerp(Deidadpos.position, posfinal,Time.deltaTime);
+    }
+
+    void Update()
+    {
+        if (moving)
+        {
+            Deidadpos.position = Vector3.Lerp(Deidadpos.position, posfinal, Time.deltaTime*smoothLerp);
+            if (Deidadpos.position == posfinal)
+            {
+                moving = false;
+            }
+        }
+
     }
 }
 

@@ -35,12 +35,16 @@ public class BasicEnemyBehaviour : MonoBehaviour {
             if (other.GetComponent<PlayerController>().Flashing)
             {
                 Destroy(this.gameObject);
+                Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(0, 0);
+                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5,3);
             }
             else
             {
                 other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 50));
                 print("salta!");
-                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
+                Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
+                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5,2);
+
             }
         }
         if (other.tag == "Enemy" || other.tag == "Rompible")

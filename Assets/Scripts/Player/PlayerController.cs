@@ -200,7 +200,7 @@ public class PlayerController : MonoBehaviour {
                 lives--;
                 Controlador.GetComponent<Controller>().QuitaVida();
                 if (other.CompareTag("Interrogacion"))
-                    Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 5);
+                    Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 5,2);
                 //if (other.CompareTag("Enemy"))
                     //Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
             }
@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour {
                 //Destroy(this);
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");
-                Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5);
+                Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5,2);
             }
         }
 
@@ -249,7 +249,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.CompareTag("FlashRoto") && plataformaCambiada)
         {
-            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Bug", 7);
+            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Bug", 7,7);
             Destroy(other.gameObject);
         }
     } 

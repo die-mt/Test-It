@@ -6,6 +6,8 @@ public class Temporizador : MonoBehaviour {
     public float targetTime;
     public GameObject Controller;
     public bool Lectura=false;
+    private bool fading = false;
+    private float Fadetimer;
 
     void Update()
     {
@@ -13,10 +15,18 @@ public class Temporizador : MonoBehaviour {
         { 
             targetTime -= Time.deltaTime;
 
+            if (targetTime <= Fadetimer && !fading)
+            {
+                GetComponent<LoadXmlData>().Fade(Fadetimer);
+                fading = true;
+            }
+
+
             if (targetTime <= 0.0f)
             {
                 timerEnded();
                 Lectura = false;
+                fading = false;
             }
 
         }
@@ -27,10 +37,12 @@ public class Temporizador : MonoBehaviour {
         GetComponent<LoadXmlData>().Borra();
     }
 
-    public void MarcaTiempos(float target)
+    public void MarcaTiempos(float target, float FadeTime)
     {
         targetTime = target;
         Lectura = true;
+        Fadetimer = FadeTime;
 
+        fading = false;
     }
 }

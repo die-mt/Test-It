@@ -20,7 +20,7 @@ public class Puzzle : MonoBehaviour {
         print("nope");
         if (Palancas[0]==true && Palancas[1] == true && Palancas[2] == true && Palancas[3] == true)
         {
-           Controlador.GetComponent<LoadXmlData>().Escribe(1, "Puzzle", 5);
+           Controlador.GetComponent<LoadXmlData>().Escribe(1, "Puzzle", 5,4);
             print("yassss");
         }
     }

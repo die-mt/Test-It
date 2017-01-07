@@ -52,7 +52,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
             {
                 other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 50));
                 print("salta!");
-                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
+                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5,2);
             }
         }
         if (other.tag == "Enemy" || other.tag == "Rompible")

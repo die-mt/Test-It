@@ -15,8 +15,9 @@ public class HasSubido : MonoBehaviour {
     {
          if (!done)
           {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 7);
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5,3);
             done = true;
+            print("movidop");
           }
       }
 }
