@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: a2e5892b0c35f994191be077b19c6c67
+timeCreated: 1483879193
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pinguino_0
+    21300002: Pinguino_1
+    21300004: Pinguino_2
+    21300006: Pinguino_3
+    21300008: Pinguino_4
+    21300010: Pinguino_5
+    21300012: Pinguino_6
+    21300014: Pinguino_7
+    21300016: Pinguino_8
+    21300018: Pinguino_9
+    21300020: Pinguino_10
+    21300022: Pinguino_11
+    21300024: Pinguino_12
+    21300026: Pinguino_13
+    21300028: Pinguino_14
+    21300030: Pinguino_15
+    21300032: Pinguino_16
+    21300034: Pinguino_17
+    21300036: Pinguino_18
+    21300038: Pinguino_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pinguino_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1652
+        width: 337
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1660
+        width: 323
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1668
+        width: 310
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_3
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1668
+        width: 313
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1256
+        width: 304
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1260
+        width: 332
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_6
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1274
+        width: 330
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_7
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1280
+        width: 310
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 860
+        width: 324
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 868
+        width: 310
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_10
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 872
+        width: 308
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_11
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 888
+        width: 304
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 468
+        width: 315
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_13
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 468
+        width: 310
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_14
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 479
+        width: 307
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_15
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 487
+        width: 299
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 76
+        width: 313
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_17
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 80
+        width: 315
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_18
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 97
+        width: 313
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinguino_19
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 103
+        width: 312
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

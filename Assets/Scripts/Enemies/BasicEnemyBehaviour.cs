@@ -23,13 +23,10 @@ public class BasicEnemyBehaviour : MonoBehaviour {
     void FixedUpdate()
     {
         cuerpo.velocity = new Vector2(Direction * MaxSpeedHorizontal, cuerpo.velocity.y);
-        if (cuerpo.velocity.y > MaxSpeedVertical)
-            cuerpo.velocity = new Vector2(cuerpo.velocity.x, MaxSpeedVertical);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.tag == "Player")
         {
             if (other.GetComponent<PlayerController>().Flashing)
@@ -51,7 +48,6 @@ public class BasicEnemyBehaviour : MonoBehaviour {
         {
             Flip(); 
         }
-
     }
 
     void Flip()
