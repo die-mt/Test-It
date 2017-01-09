@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
     private bool flashRoto=false;
     private bool plataformaCambiada = false;
     private bool gamePaused;
+    private Sprite vidasImagen;
+    private Texture2D iconoVida1;
 
     private float energy;
     private int rompibleCount=0;
@@ -45,6 +47,8 @@ public class PlayerController : MonoBehaviour {
         groundCheck1 = transform.Find("groundCheck1");
         Controlador = GameObject.Find("Controller");
         paused = GameObject.Find("Canvas");
+        vidasImagen = GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite;
+        iconoVida1 = FindObjectOfType<Texture2D>();
         //anim = GetComponent<Animator>();
     }
 
@@ -198,6 +202,7 @@ public class PlayerController : MonoBehaviour {
             if (lives != 0)
             {
                 lives--;
+                ChangeLifeImage();
                 Controlador.GetComponent<Controller>().QuitaVida();
                 if (other.CompareTag("Interrogacion"))
                     Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 5,2);
@@ -235,6 +240,12 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
+    }
+
+    void ChangeLifeImage()
+    {
+        if (lives == 1)
+            vidasImagen = Texture2D.;
     }
 
     void OnTriggerStay2D(Collider2D other)
