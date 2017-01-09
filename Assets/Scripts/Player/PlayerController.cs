@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public bool jump = false;				// Condition for whether the player should jump.
     //[HideInInspector]
-    public int lives = 2;
+    public int lives = 3;
 
     public float maxSpeed = 10f;
 
@@ -22,8 +22,16 @@ public class PlayerController : MonoBehaviour {
     private bool flashRoto=false;
     private bool plataformaCambiada = false;
     private bool gamePaused;
-    private Sprite vidasImagen;
-    private Texture2D iconoVida1;
+
+    public Sprite iconoVida0;
+    public Sprite iconoVida1;
+    public Sprite iconoVida2;
+
+    public Sprite iconoEnergia0;
+    public Sprite iconoEnergia1; 
+    public Sprite iconoEnergia2; 
+    public Sprite iconoEnergia3; 
+    public Sprite iconoEnergia4;
 
     private float energy;
     private int rompibleCount=0;
@@ -47,8 +55,6 @@ public class PlayerController : MonoBehaviour {
         groundCheck1 = transform.Find("groundCheck1");
         Controlador = GameObject.Find("Controller");
         paused = GameObject.Find("Canvas");
-        vidasImagen = GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite;
-        iconoVida1 = FindObjectOfType<Texture2D>();
         //anim = GetComponent<Animator>();
     }
 
@@ -152,7 +158,7 @@ public class PlayerController : MonoBehaviour {
                         print("Y: " + target.y);
                         GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x * energy, target.y * 3 * energy)); //Metemos la juerza en la direccion del 
                         energy = 0f;
-                        
+                        GameObject.Find("EnergiaTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoEnergia0;
                     }
                     else
                     {
@@ -173,7 +179,17 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (initTimer)
-            energy += Time.deltaTime*4;
+        {
+            energy += Time.deltaTime * 4;
+            if (energy>1.5)
+                GameObject.Find("EnergiaTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoEnergia4;
+            else if (energy > 1.1)
+                GameObject.Find("EnergiaTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoEnergia3;
+            else if (energy > 0.8)
+                GameObject.Find("EnergiaTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoEnergia2;
+            else if (energy > 0)
+                GameObject.Find("EnergiaTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoEnergia1;
+        }
 
         print(flashRoto);
 
@@ -197,7 +213,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Interrogacion") /*|| other.CompareTag("Enemy")*/)
+        if (other.CompareTag("Interrogacion") /*|| other.CompareTag("Enemy")*/)  //http://answers.unity3d.com/questions/172975/only-check-collision-of-certain-collider.html
         {
             if (lives != 0)
             {
@@ -213,7 +229,7 @@ public class PlayerController : MonoBehaviour {
             {
                 //Destroy(this);
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5,2);
             }
         }
@@ -244,8 +260,12 @@ public class PlayerController : MonoBehaviour {
 
     void ChangeLifeImage()
     {
+        if (lives == 2)
+            GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida0;
         if (lives == 1)
-            vidasImagen = Texture2D.;
+            GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida1;
+        if (lives == 0)
+            GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida2;
     }
 
     void OnTriggerStay2D(Collider2D other)
