@@ -13,6 +13,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
     private GameObject Controlador;
     private GameObject player;
     private float MaxRange = 300f;
+    private Animator anim;
 
 
     private Rigidbody2D cuerpo;
@@ -23,6 +24,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
         Controlador = GameObject.Find("Controller");
         cuerpo = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -32,10 +34,12 @@ public class FlyingEnemyBehaviour : MonoBehaviour
         {
             Direction.Normalize();
             cuerpo.velocity = new Vector2(Direction.x * MaxSpeedHorizontal, Direction.y * MaxSpeedHorizontal + Mathf.Sin(Time.time*5)*5);
+            anim.SetBool("encontrado", true);
         }
         else
         {
             cuerpo.velocity = new Vector2(0, 0);
+            anim.SetBool("encontrado", false);
         }
     }
 

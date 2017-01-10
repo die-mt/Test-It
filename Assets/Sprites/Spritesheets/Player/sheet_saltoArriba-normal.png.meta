@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: bd4c6e58e8c429b45ae62a4a7b72e1e5
+timeCreated: 1484010240
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sheet_saltoArriba-normal_0
+    21300002: sheet_saltoArriba-normal_1
+    21300004: sheet_saltoArriba-normal_2
+    21300006: sheet_saltoArriba-normal_3
+    21300008: sheet_saltoArriba-normal_4
+    21300010: sheet_saltoArriba-normal_5
+    21300012: sheet_saltoArriba-normal_6
+    21300014: sheet_saltoArriba-normal_7
+    21300016: sheet_saltoArriba-normal_8
+    21300018: sheet_saltoArriba-normal_9
+    21300020: sheet_saltoArriba-normal_10
+    21300022: sheet_saltoArriba-normal_11
+    21300024: sheet_saltoArriba-normal_12
+    21300026: sheet_saltoArriba-normal_13
+    21300028: sheet_saltoArriba-normal_14
+    21300030: sheet_saltoArriba-normal_15
+    21300032: sheet_saltoArriba-normal_16
+    21300034: sheet_saltoArriba-normal_17
+    21300036: sheet_saltoArriba-normal_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_0
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 791
+        width: 117
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 788
+        width: 116
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 788
+        width: 117
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_3
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 788
+        width: 119
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_4
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 787
+        width: 118
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 544
+        width: 121
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 545
+        width: 120
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_7
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 544
+        width: 121
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_8
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 543
+        width: 120
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 542
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_10
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 540
+        width: 120
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_11
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 542
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 293
+        width: 120
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_13
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 293
+        width: 121
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_14
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 292
+        width: 121
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 293
+        width: 124
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_16
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 291
+        width: 123
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_17
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 291
+        width: 123
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sheet_saltoArriba-normal_18
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 291
+        width: 123
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
