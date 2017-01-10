@@ -14,7 +14,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
     private GameObject player;
     private float MaxRange = 300f;
     private Animator anim;
-
+    
 
     private Rigidbody2D cuerpo;
 
@@ -34,13 +34,15 @@ public class FlyingEnemyBehaviour : MonoBehaviour
         {
             Direction.Normalize();
             cuerpo.velocity = new Vector2(Direction.x * MaxSpeedHorizontal, Direction.y * MaxSpeedHorizontal + Mathf.Sin(Time.time*5)*5);
-            anim.SetBool("encontrado", true);
         }
         else
         {
             cuerpo.velocity = new Vector2(0, 0);
-            anim.SetBool("encontrado", false);
         }
+        if (Direction.x > 0 && !facingRight)
+            Flip();
+        else if (Direction.x < 0 && facingRight)
+            Flip();
     }
 
     void OnTriggerEnter2D(Collider2D other)

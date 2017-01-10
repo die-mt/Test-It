@@ -34,6 +34,7 @@ public class LoadXmlData : MonoBehaviour // the Class
     void Awake()
     { //Timeline of the Level creator
         GetLevel();
+        bubble.enabled = false;
     }
 
     public void GetLevel()

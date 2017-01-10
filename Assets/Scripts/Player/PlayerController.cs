@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject Controlador;
     private GameObject paused;
 
-    //private Animator anim;					// Reference to the player's animator component.
+    private Animator animator;
 
 
     void Awake()
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
         groundCheck1 = transform.Find("groundCheck1");
         Controlador = GameObject.Find("Controller");
         paused = GameObject.Find("Canvas");
-        //anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -93,9 +93,22 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
+        if (grounded || aproximacionRompible)
+        {
+            if (move > 0)
+            {
+                animator.SetInteger("State", 1);
+            }
+            else if (move == -1)
+            {
+                animator.SetInteger("State", 1);
+            }
 
-
-
+            else if (move == 0)
+            {
+                animator.SetInteger("State", 0);
+            }
+        }
         if (grounded || aproximacionRompible)
         {
             if (getButtonDowmJump)
@@ -104,6 +117,7 @@ public class PlayerController : MonoBehaviour {
                 getButtonDowmJump = false;
                 getButtonUpJump = false;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+                animator.SetInteger("State", 2);
             }
             if (flashing && !aproximacionRompible) //Cuando alcanza el suelo despues de salto flash
             {
@@ -124,6 +138,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (secondJump)
             {
+                animator.SetInteger("State", 2);
                 if (getButtonDowmJump)
                 {
                     getButtonDowmJump = false;
@@ -215,9 +230,11 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.CompareTag("Interrogacion") /*|| other.CompareTag("Enemy")*/)  //http://answers.unity3d.com/questions/172975/only-check-collision-of-certain-collider.html
         {
+            other.GetComponent<Animator>().SetBool("PlayerIn", true);
             if (lives != 0)
             {
                 lives--;
+                
                 ChangeLifeImage();
                 Controlador.GetComponent<Controller>().QuitaVida();
                 if (other.CompareTag("Interrogacion"))
