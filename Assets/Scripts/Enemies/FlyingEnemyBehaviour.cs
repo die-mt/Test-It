@@ -7,6 +7,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
 
     public float MaxSpeedHorizontal = 5f;
     public float MaxSpeedVertical = 10f;
+    public bool NubeEspecial=false;
 
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private Vector2 Direction;
@@ -14,7 +15,9 @@ public class FlyingEnemyBehaviour : MonoBehaviour
     private GameObject player;
     private float MaxRange = 300f;
     private Animator anim;
-    
+    private bool ataque = false;
+    private int contador = 0;
+
 
     private Rigidbody2D cuerpo;
 
@@ -43,6 +46,14 @@ public class FlyingEnemyBehaviour : MonoBehaviour
             Flip();
         else if (Direction.x < 0 && facingRight)
             Flip();
+
+        if (ataque == true && contador >= 25)
+        {
+            contador = 0;
+            ataque = false;
+        }
+        else
+        { contador++; }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -53,12 +64,26 @@ public class FlyingEnemyBehaviour : MonoBehaviour
             if (other.GetComponent<PlayerController>().Flashing)
             {
                 Destroy(this.gameObject);
+                if (NubeEspecial)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");//"Test It! LevelTutorial");
+                }
             }
             else
             {
-                other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 50));
-                print("salta!");
-                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5,2);
+                if (ataque == false)
+                {
+                    player.GetComponent<PlayerController>().lives--;
+                    player.GetComponent<PlayerController>().contador = 0;
+                    player.GetComponent<PlayerController>().ChangeLifeImage();
+                    Controlador.GetComponent<Controller>().QuitaVida();
+                    player.GetComponent<BoxCollider2D>().enabled = false;
+                    player.GetComponent<CircleCollider2D>().enabled = false;
+                    other.GetComponent<Rigidbody2D>().velocity = (new Vector2(25, 15));
+                    Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
+                    ataque = true;
+                    contador = 0;
+                }
             }
         }
         if (other.tag == "Enemy" || other.tag == "Rompible")

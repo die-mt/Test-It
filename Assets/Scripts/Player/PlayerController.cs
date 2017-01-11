@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 
     private float energy;
     private int rompibleCount=0;
+    public int contador = 0;
 
     private Transform groundCheck;			// A position marking where to check if the player is grounded.
     private Transform groundCheck1;
@@ -72,6 +73,13 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetButtonUp("Jump"))
                 getButtonUpJump = true;
         }
+        if (GetComponent<BoxCollider2D>().enabled == false && GetComponent<CircleCollider2D>().enabled == false && contador >= 25)
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<CircleCollider2D>().enabled = true;
+            contador = 0;
+        }
+        else { contador++; }
     }
 
 
@@ -187,6 +195,7 @@ public class PlayerController : MonoBehaviour {
                         plataforma = GameObject.Find("Cueva");
                         plataformaCambiada = true;
                         Destroy(GameObject.Find("Platform (7)"));
+                        Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(900, 900);
                     }
                     secondJump = false;
                 }
@@ -275,7 +284,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void ChangeLifeImage()
+   public void ChangeLifeImage()
     {
         if (lives == 2)
             GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida0;
@@ -283,6 +292,10 @@ public class PlayerController : MonoBehaviour {
             GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida1;
         if (lives == 0)
             GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida2;
+        if (lives == -1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);//"Test It! LevelTutorial");
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)

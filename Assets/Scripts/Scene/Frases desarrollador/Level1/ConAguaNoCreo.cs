@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HasSubido : MonoBehaviour {
+public class ConAguaNoCreo : MonoBehaviour {
 
     private GameObject Controller;
     private bool done = false;
@@ -13,11 +13,11 @@ public class HasSubido : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-         if (!done)
-          {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5,3);
+        if (!done && other.tag == "Player")
+        {
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Gag1", 3, 1);
             done = true;
             print("movidop");
-          }
-      }
+        }
+    }
 }

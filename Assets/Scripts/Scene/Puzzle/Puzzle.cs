@@ -4,6 +4,7 @@ using System.Collections;
 public class Puzzle : MonoBehaviour {
 
     bool[] Palancas= new bool [15];
+    public GameObject Player;
     private GameObject Controlador;
 
 
@@ -22,6 +23,9 @@ public class Puzzle : MonoBehaviour {
         {
            Controlador.GetComponent<LoadXmlData>().Escribe(1, "Puzzle", 5,4);
             print("yassss");
+            Player.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 300));
+            GetComponent<Temporizador>().MarcaTiempos(2, 0, 2);
+
         }
     }
 

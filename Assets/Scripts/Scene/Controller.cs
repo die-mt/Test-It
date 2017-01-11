@@ -21,7 +21,7 @@ public class Controller : MonoBehaviour
         vidas = Jugador.GetComponent<PlayerController>().lives;
         Colecc.text = Recogidos.ToString();
         //VidHud.text = vidas.ToString();
-        Controlador.GetComponent<LoadXmlData>().Escribe(1, "introduccion", 5,5);
+        Controlador.GetComponent<LoadXmlData>().Escribe(1, "introduccion", 0,0);
     }
 
     public void SumaColeccionables()

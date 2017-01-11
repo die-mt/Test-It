@@ -15,6 +15,9 @@ public class Jumpman : MonoBehaviour
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private int Direction = -1;
     private GameObject Controlador;
+    private GameObject Player;
+    private bool ataque = false;
+    private int contador = 0;
 
 
     private Rigidbody2D cuerpo;
@@ -23,6 +26,7 @@ public class Jumpman : MonoBehaviour
     void Start()
     {
         Controlador = GameObject.Find("Controller");
+        Player = GameObject.Find("Player");
         cuerpo = GetComponent<Rigidbody2D>();
     }
 
@@ -40,6 +44,13 @@ public class Jumpman : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = Standingposition;
             }
         }
+        if (ataque==true && contador >= 25)
+        {
+            contador = 0;
+            ataque = false;
+        }
+        else
+        {contador++; }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -52,20 +63,27 @@ public class Jumpman : MonoBehaviour
                 {
                     GetComponent<SpriteRenderer>().sprite = U2Dead;
                     Destroy(this.gameObject, 2);
-                    Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(0, 0);
-                    Controlador.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5, 3);
+
                     vivo = false;
                 }
                 else
                 {
-                    other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 50));
-                    print("salta!");
-                    Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
-                    Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5, 2);
-
+                    if (ataque==false)
+                    {
+                        Player.GetComponent<PlayerController>().lives--;
+                        Player.GetComponent<PlayerController>().contador=0;
+                        Player.GetComponent<PlayerController>().ChangeLifeImage();
+                        Controlador.GetComponent<Controller>().QuitaVida();
+                        Player.GetComponent<BoxCollider2D>().enabled = false;
+                        Player.GetComponent<CircleCollider2D>().enabled = false;
+                        other.GetComponent<Rigidbody2D>().velocity = (new Vector2(25, 15));
+                        Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
+                        ataque = true;
+                        contador = 0;
+                    }
                 }
             }
-            if (other.tag == "Enemy" || other.tag == "Rompible")
+            if (other.tag == "Enemy" || other.tag == "Rompible" || other.tag == "Barrier")
             {
                 Flip();
             }
