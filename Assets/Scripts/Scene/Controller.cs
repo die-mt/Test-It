@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour
 {
     public Text Colecc;
-    public Text VidHud;
+   // public Text VidHud;
 
     private int Recogidos;
     private GameObject Controlador;
@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
         Jugador= GameObject.Find("Player");
         vidas = Jugador.GetComponent<PlayerController>().lives;
         Colecc.text = Recogidos.ToString();
-        VidHud.text = vidas.ToString();
+        //VidHud.text = vidas.ToString();
         Controlador.GetComponent<LoadXmlData>().Escribe(1, "introduccion", 5,5);
     }
 
@@ -32,8 +32,8 @@ public class Controller : MonoBehaviour
 
     public void QuitaVida()
     {
-        vidas--;
-        VidHud.text = vidas.ToString();
+        //vidas--;
+        //VidHud.text = vidas.ToString();
     }
 
 }

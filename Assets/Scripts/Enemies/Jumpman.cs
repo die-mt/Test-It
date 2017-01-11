@@ -51,7 +51,7 @@ public class Jumpman : MonoBehaviour
                 if (other.GetComponent<PlayerController>().Flashing)
                 {
                     GetComponent<SpriteRenderer>().sprite = U2Dead;
-                    Destroy(this.gameObject, 5);
+                    Destroy(this.gameObject, 2);
                     Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(0, 0);
                     Controlador.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5, 3);
                     vivo = false;
