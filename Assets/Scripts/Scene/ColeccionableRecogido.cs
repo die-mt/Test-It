@@ -16,10 +16,8 @@ public class ColeccionableRecogido : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            print("estoy dentro(ColeccionableRecogido)");
             Controlador.GetComponent<Controller>().SumaColeccionables();
             animator.SetBool("Entering", true);
-            Controlador.GetComponent<LoadXmlData>().Escribe(1, "coleccionable", 5,5);
             Destroy(this.gameObject, 0);
 
         }

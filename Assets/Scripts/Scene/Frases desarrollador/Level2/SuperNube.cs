@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ConAguaNoCreo : MonoBehaviour {
+public class SuperNube : MonoBehaviour {
 
     private GameObject Controller;
     private bool done = false;
@@ -15,7 +15,8 @@ public class ConAguaNoCreo : MonoBehaviour {
     {
         if (!done && other.tag == "Player")
         {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Gag1", 3, 1);
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Explicacion2-2", 6, 2);
+            //Controller.GetComponent<LoadXmlData>().DeslizaDeidad(900,700);
             done = true;
         }
     }

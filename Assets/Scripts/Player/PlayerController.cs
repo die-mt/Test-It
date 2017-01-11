@@ -246,8 +246,6 @@ public class PlayerController : MonoBehaviour {
                 
                 ChangeLifeImage();
                 Controlador.GetComponent<Controller>().QuitaVida();
-                if (other.CompareTag("Interrogacion"))
-                    Controlador.GetComponent<LoadXmlData>().Escribe(1,"CajaFalsa", 5,2);
                 //if (other.CompareTag("Enemy"))
                     //Controlador.GetComponent<LoadXmlData>().Escribe(1, "Enemigo", 5);
             }

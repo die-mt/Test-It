@@ -77,6 +77,36 @@ public class LoadXmlData : MonoBehaviour // the Class
                         case "Bug": obj.Add("Bug", levelsItens.InnerText); break;
                         case "Explicacion1": obj.Add("Explicacion1", levelsItens.InnerText); break;
                         case "Explicacion2": obj.Add("Explicacion2", levelsItens.InnerText); break;
+                        case "Explicacion3": obj.Add("Explicacion3", levelsItens.InnerText); break;
+                        case "Explicacion4": obj.Add("Explicacion4", levelsItens.InnerText); break;
+                        case "Explicacion5": obj.Add("Explicacion5", levelsItens.InnerText); break;
+                        case "Explicacion6": obj.Add("Explicacion6", levelsItens.InnerText); break;
+                        case "Explicacion7": obj.Add("Explicacion7", levelsItens.InnerText); break;
+                        case "Explicacion8": obj.Add("Explicacion8", levelsItens.InnerText); break;
+
+                        case "Explicacion0-1": obj.Add("Explicacion0-1", levelsItens.InnerText); break;
+                        case "Explicacion0-2": obj.Add("Explicacion0-2", levelsItens.InnerText); break;
+                        case "Explicacion0-3": obj.Add("Explicacion0-3", levelsItens.InnerText); break;
+                        case "Explicacion0-4": obj.Add("Explicacion0-4", levelsItens.InnerText); break;
+                        case "Explicacion0-5": obj.Add("Explicacion0-5", levelsItens.InnerText); break;
+                        case "Explicacion0-6": obj.Add("Explicacion0-6", levelsItens.InnerText); break;
+                        case "Explicacion0-7": obj.Add("Explicacion0-7", levelsItens.InnerText); break;
+                        case "Explicacion0-8": obj.Add("Explicacion0-8", levelsItens.InnerText); break;
+                        case "Explicacion0-9": obj.Add("Explicacion0-9", levelsItens.InnerText); break;
+
+                        case "Explicacion2-1": obj.Add("Explicacion2-1", levelsItens.InnerText); break;
+                        case "Explicacion2-2": obj.Add("Explicacion2-2", levelsItens.InnerText); break;
+                        case "Explicacion2-3": obj.Add("Explicacion2-3", levelsItens.InnerText); break;
+                        case "Explicacion2-4": obj.Add("Explicacion2-4", levelsItens.InnerText); break;
+                        case "Explicacion2-5": obj.Add("Explicacion2-5", levelsItens.InnerText); break;
+                        case "Explicacion2-6": obj.Add("Explicacion2-6", levelsItens.InnerText); break;
+                        case "Explicacion2-7": obj.Add("Explicacion2-7", levelsItens.InnerText); break;
+                        case "Explicacion2-8": obj.Add("Explicacion2-8", levelsItens.InnerText); break;
+                        case "Explicacion2-9": obj.Add("Explicacion2-9", levelsItens.InnerText); break;
+                        case "Explicacion2-10": obj.Add("Explicacion2-10", levelsItens.InnerText); break;
+                        case "Explicacion2-11": obj.Add("Explicacion2-11", levelsItens.InnerText); break;
+                        case "Explicacion2-12": obj.Add("Explicacion2-12", levelsItens.InnerText); break;
+
                         case "Gag1": obj.Add("Gag1", levelsItens.InnerText); break;
                         case "Gag2": obj.Add("Gag2", levelsItens.InnerText); break;
                     }

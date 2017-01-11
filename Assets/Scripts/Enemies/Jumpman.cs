@@ -77,7 +77,6 @@ public class Jumpman : MonoBehaviour
                         Player.GetComponent<BoxCollider2D>().enabled = false;
                         Player.GetComponent<CircleCollider2D>().enabled = false;
                         other.GetComponent<Rigidbody2D>().velocity = (new Vector2(25, 15));
-                        Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
                         ataque = true;
                         contador = 0;
                     }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ConAguaNoCreo : MonoBehaviour {
+public class Cena : MonoBehaviour {
 
     private GameObject Controller;
     private bool done = false;
@@ -15,8 +15,10 @@ public class ConAguaNoCreo : MonoBehaviour {
     {
         if (!done && other.tag == "Player")
         {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Gag1", 3, 1);
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Explicacion2-12", 6, 2);
             done = true;
+            Controller.GetComponent<Temporizador>().MarcaTiempos(2, 0, 3);
+            Destroy(this.GetComponent<SpriteRenderer>(), 0);
         }
     }
 }

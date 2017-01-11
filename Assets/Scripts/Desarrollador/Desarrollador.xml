@@ -3,13 +3,38 @@
     <name>Level 1 (xml)</name>
     <introduccion> </introduccion>
     <coleccionable>Vaya, has cogido un coleccionable.Disfrutalo! No sirve para nada.Es lo que tienen las betas</coleccionable>
-    <object name="Mexican"> *prit* Achievemt Unlocked: Mexican Immigrant! </object>
+    <object name="Mexican"> *prit* Achievement Unlocked: Mexican Immigrant! </object>
     <object name="Enemigo"> ¡Cuidado!¡La nube busca venganza!</object>
     <object name="CajaFalsa">Ups, no debería de hacer eso...La culpa es del motor del juego!</object>
     <object name="Puzzle">¡JAJAJA! ¡Vuela! ¡Consigue tu arma!¡Al cielo!</object>
     <object name="Bug">¡Escondo los scripted events como un maestro! ¿A que si?</object>
     <object name="Explicacion1">Ha habido un problema con tu arma, he cargado la imagen en otro sitio ¡Busca!</object>
-    <object name="Explicacion2">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion2">El puzzle difícil¿Eh? Dispara a las palancas</object>
+    <object name="Explicacion3">It's a trap!</object>
+    <object name="Explicacion4">¿Te has fijado en que ahora estás animado? ¡Mejor calidad de vida!</object>
+
+    <object name="Explicacion0-1">¿¡Pero que?!¿Como has acabado ahí, tester? ¡Primero! ¿Te puedes mover? Usa a y d</object>
+    <object name="Explicacion0-2">Puedes hacer un salto flash manteniendo pulsado espacio en el aire y apuntando con el ratón hacia donde saldrás disparado</object>
+    <object name="Explicacion0-3">Creo que si completas el juego alomejor podrás salir de él. Creo.</object>
+    <object name="Explicacion0-4">¡Oh, bloque rompibles! ¡Atacales con el salto flash!</object>
+    <object name="Explicacion0-5">¡JAJA! ¡Has caido! ¡¿Verdad que es gracioso?! ¡Soy gracioso!</object>
+    <object name="Explicacion0-7">¡Un coleccionable! =D Te ayudará anímicamente</object>
+    <object name="Explicacion0-8"> Bueno, tu juega y a ver donde acabamos. Salta con el espacio </object>
+    <object name="Explicacion0-9"> Perdón, esto es serio. Para avanzar tendrás que matar a esta nube con el salto flash.</object>
+
+    <object name="Explicacion2-1">Ufffff Aterrizaje duro¿eh?</object>
+    <object name="Explicacion2-2">¡Cada nube que ves consume 1.5 terafluzos! ¡Están a super definición!</object>
+    <object name="Explicacion2-3">Confia en mi, abajo hay suelo. Si no me crees puedes ir a por el coleccionable</object>
+    <object name="Explicacion2-4">¡Muy bien!¡Así me gusta! Fomentando una relación de confianza òwó</object>
+    <object name="Explicacion2-5">Ya me pediras ayuda, ya... -_-</object>
+    <object name="Explicacion2-6">¡Juguemos al Dig-Dug!</object>
+    <object name="Explicacion2-7">Cuidado, que esta es dificil</object>
+    <object name="Explicacion2-8"> Bueno, te espero arriba. Cuando mueras unas veces nos vemos =) </object>
+    <object name="Explicacion2-9"> I'm on a Stairway to Heaven ¡CHAN! ¡CHAN!</object>
+    <object name="Explicacion2-10"> Vaya, has llegado "entero"</object>
+    <object name="Explicacion2-11"> El arma definitiva está a tu alcance. Tira tres cabezas nucleares por segundo ewe</object>
+    <object name="Explicacion2-12"> Bueno, me voy a cenar pizza con doritos. Luego te creo más niveles¡Dew!</object>
+    
     <object name="Gag1">Por cierto, puedes disparar con el click, pero con agua no creo que hagas mucho (mi fallo)</object>
     <finaltext>dsadasda</finaltext>
   </level>
@@ -19,6 +44,24 @@
     <coleccionable>Vaya, has cogido un coleccionable.Disfrutalo! No sirve para nada.Es lo que tienen las betas</coleccionable>
     <object name="Salto"> Salta sin paraaaar </object>
     <object name="Enemigo"> A volar! Ser inmortal tiene sus contras</object>
+    <object name="Explicacion1">Ha habido un problema con tu arma, he cargado la imagen en otro sitio ¡Busca!</object>
+    <object name="Explicacion2">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion3">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion4">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion5">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion6">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion7">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion8">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion9">El puzzle difícil¿Eh?</object>
+    <finaltext>Congratulations! (xml)</finaltext>
+  </level>
+  <level>
+    <name>Level 3 (xml)</name>
+    <introduccion>Este es el segundo nivel que hice. Se nota la mejora, eh?</introduccion>
+    <object name="Explicacion6">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion7">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion8">El puzzle difícil¿Eh?</object>
+    <object name="Explicacion9">El puzzle difícil¿Eh?</object>
     <finaltext>Congratulations! (xml)</finaltext>
   </level>
 </levels>

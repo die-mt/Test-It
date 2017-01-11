@@ -43,8 +43,6 @@ public class BasicEnemyBehaviour : MonoBehaviour {
             if (other.GetComponent<PlayerController>().Flashing)
             {
                 Destroy(this.gameObject);
-                Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(0, 0);
-                Controlador.GetComponent<LoadXmlData>().Escribe(1, "Mexican", 5,3);
             }
             else
             {
@@ -57,7 +55,6 @@ public class BasicEnemyBehaviour : MonoBehaviour {
                     Player.GetComponent<BoxCollider2D>().enabled = false;
                     Player.GetComponent<CircleCollider2D>().enabled = false;
                     other.GetComponent<Rigidbody2D>().velocity = (new Vector2(25, 15));
-                    Controlador.GetComponent<LoadXmlData>().DeslizaDeidad(500, 500);
                     ataque = true;
                     contador = 0;
                 }

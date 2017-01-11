@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ConAguaNoCreo : MonoBehaviour {
+public class FuerzaMental : MonoBehaviour {
 
     private GameObject Controller;
     private bool done = false;
@@ -15,7 +15,7 @@ public class ConAguaNoCreo : MonoBehaviour {
     {
         if (!done && other.tag == "Player")
         {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Gag1", 3, 1);
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Explicacion0-7", 5, 3);
             done = true;
         }
     }

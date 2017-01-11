@@ -35,6 +35,11 @@ public class Temporizador : MonoBehaviour {
                 print("Cambio nivel ahora!");
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level2");//"");
             }
+            if (targetTime <= 0.0f && Tipo == 3)
+            {
+                print("Cambio nivel ahora!");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");//"");
+            }
 
         }
     }

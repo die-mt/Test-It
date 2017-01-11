@@ -8,8 +8,6 @@ public class menuScript : MonoBehaviour {
     public Image Title;
     public Image MonitorOff;
     public Button startText;
-    public Button instructions;
-    public Button options;
     public Button exitText;
     public Button PCbutton;
     public Image GreenDot;
@@ -28,8 +26,6 @@ public class menuScript : MonoBehaviour {
         quitMenu = quitMenu.GetComponent<Canvas>();
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
-        instructions = instructions.GetComponent<Button>();
-        options = options.GetComponent<Button>();
         PCbutton = PCbutton.GetComponent<Button>();
         GreenDot = GreenDot.GetComponent<Image>();
         RedDot = RedDot.GetComponent<Image>();
@@ -46,8 +42,6 @@ public class menuScript : MonoBehaviour {
     {
         quitMenu.enabled = true;
         startText.enabled = false;
-        instructions.enabled = false;
-        options.enabled = false;
         exitText.enabled = false;
         ClickSound();
     }
@@ -56,8 +50,6 @@ public class menuScript : MonoBehaviour {
     {
         quitMenu.enabled = false;
         startText.enabled = true;
-        instructions.enabled = true;
-        options.enabled = true;
         exitText.enabled = true;
         ClickSound();
     }
@@ -65,7 +57,7 @@ public class menuScript : MonoBehaviour {
     public void StartLevel()
     {
         ClickSound();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1Rizo");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! LevelTutorial");
     }
 
     public void ExitGame() 
@@ -80,8 +72,6 @@ public class menuScript : MonoBehaviour {
         {
             Title.enabled = true;
             startText.enabled = true;
-            instructions.enabled = true;
-            options.enabled = true;
             exitText.enabled = true;
             ScreenOff = false;
             MonitorOff.enabled = false;
@@ -100,8 +90,6 @@ public class menuScript : MonoBehaviour {
         {
             Title.enabled = false;
             startText.enabled = false;
-            instructions.enabled = false;
-            options.enabled = false;
             exitText.enabled = false;
             ScreenOff = true;
             MonitorOff.enabled = true;
