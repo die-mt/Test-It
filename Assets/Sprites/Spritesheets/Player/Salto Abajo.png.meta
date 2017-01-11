@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 389ebafcb8768d24185f348430a31c66
+timeCreated: 1484010227
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Salto Abajo_0
+    21300002: Salto Abajo_1
+    21300004: Salto Abajo_2
+    21300006: Salto Abajo_3
+    21300008: Salto Abajo_4
+    21300010: Salto Abajo_5
+    21300012: Salto Abajo_6
+    21300014: Salto Abajo_7
+    21300016: Salto Abajo_8
+    21300018: Salto Abajo_9
+    21300020: Salto Abajo_10
+    21300022: Salto Abajo_11
+    21300024: Salto Abajo_12
+    21300026: Salto Abajo_13
+    21300028: Salto Abajo_14
+    21300030: Salto Abajo_15
+    21300032: Salto Abajo_16
+    21300034: Salto Abajo_17
+    21300036: Salto Abajo_18
+    21300038: Salto Abajo_19
+    21300040: Salto Abajo_20
+    21300042: Salto Abajo_21
+    21300044: Salto Abajo_22
+    21300046: Salto Abajo_23
+    21300048: Salto Abajo_24
+    21300050: Salto Abajo_25
+    21300052: Salto Abajo_26
+    21300054: Salto Abajo_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Salto Abajo_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 792
+        width: 118
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 791
+        width: 119
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 791
+        width: 115
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_3
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 790
+        width: 118
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 788
+        width: 117
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 788
+        width: 118
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_6
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 788
+        width: 117
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 548
+        width: 115
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 548
+        width: 118
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_9
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 547
+        width: 116
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_10
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 547
+        width: 118
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_11
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 544
+        width: 119
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 547
+        width: 120
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_13
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 546
+        width: 116
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_14
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 302
+        width: 114
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_15
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 302
+        width: 121
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 301
+        width: 118
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_17
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 300
+        width: 113
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_18
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 300
+        width: 121
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_19
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 299
+        width: 121
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_20
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 300
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 51
+        width: 124
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 48
+        width: 121
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_23
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 48
+        width: 121
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_24
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 51
+        width: 121
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_25
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 48
+        width: 122
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_26
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 49
+        width: 122
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Salto Abajo_27
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 49
+        width: 123
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

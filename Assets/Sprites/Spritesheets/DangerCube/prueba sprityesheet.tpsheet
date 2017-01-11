@@ -1,0 +1,37 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:2708f00e4019cebfb39c37bd845af46c:bbfde6b7fb7c9124f4364f74c0daa3ba:b38647c6cd71ba088fbe0df1beb0978f$
+#
+:format=40300
+:texture=prueba sprityesheet.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+
+sheet_ataque_cubo_int-normal-01;258;1805;243;242; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-02;503;1807;240;240; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-03;745;1814;235;233; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-04;745;1583;231;229; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-05;258;1585;219;218; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-06;503;1579;225;226; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-07;1;1577;215;214; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-08;218;1371;209;212; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-09;1;1369;207;206; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-10;730;1386;195;195; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-11;429;1379;194;198; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-12;625;1191;193;193; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-13;429;1187;191;190; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-14;820;1196;188;188; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-15;210;1185;179;184; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-16;820;1008;186;186; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-17;622;1007;184;182; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-18;808;826;182;180; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-19;1;1189;179;178; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-20;1;1011;177;176; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-21;391;1009;175;176; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal-22;180;1007;175;176; 0.5;0.5; 0;0;0;0
+sheet_ataque_cubo_int-normal;1;1793;255;254; 0.5;0.5; 0;0;0;0

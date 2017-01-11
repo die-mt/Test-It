@@ -6,6 +6,9 @@ public class Temporizador : MonoBehaviour {
     public float targetTime;
     public GameObject Controller;
     public bool Lectura=false;
+    private bool fading = false;
+    private float Fadetimer;
+    private int Tipo;
 
     void Update()
     {
@@ -13,10 +16,29 @@ public class Temporizador : MonoBehaviour {
         { 
             targetTime -= Time.deltaTime;
 
-            if (targetTime <= 0.0f)
+            if (targetTime <= Fadetimer && !fading && Tipo==1)
+            {
+                GetComponent<LoadXmlData>().Fade(Fadetimer);
+                fading = true;
+            }
+
+
+            if (targetTime <= 0.0f && Tipo == 1)
             {
                 timerEnded();
                 Lectura = false;
+                fading = false;
+            }
+
+            if (targetTime<=0.0f && Tipo==2)
+            {
+                print("Cambio nivel ahora!");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level2");//"");
+            }
+            if (targetTime <= 0.0f && Tipo == 3)
+            {
+                print("Cambio nivel ahora!");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");//"");
             }
 
         }
@@ -27,10 +49,13 @@ public class Temporizador : MonoBehaviour {
         GetComponent<LoadXmlData>().Borra();
     }
 
-    public void MarcaTiempos(float target)
+    public void MarcaTiempos(float target, float FadeTime, int tipo)
     {
         targetTime = target;
         Lectura = true;
+        Fadetimer = FadeTime;
+        Tipo = tipo;
 
+        fading = false;
     }
 }

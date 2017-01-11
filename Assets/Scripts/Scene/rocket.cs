@@ -48,7 +48,7 @@ public class rocket : MonoBehaviour {
             //Destroy(gameObject);
         }
         // Otherwise if the player manages to shoot himself...
-        else if (col.gameObject.tag != "Player")
+        else if (col.gameObject.tag != "Player" && col.tag!="FlashRoto")
         {
             // Instantiate the explosion and destroy the rocket.
             OnExplode();

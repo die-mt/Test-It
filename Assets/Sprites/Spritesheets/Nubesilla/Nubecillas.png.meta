@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 53fb838faf2220c40af61c0c33849e44
+timeCreated: 1483733971
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Nubecillas_0
+    21300002: Nubecillas_1
+    21300004: Nubecillas_2
+    21300006: Nubecillas_3
+    21300008: Nubecillas_4
+    21300010: Nubecillas_5
+    21300012: Nubecillas_6
+    21300014: Nubecillas_7
+    21300016: Nubecillas_8
+    21300018: Nubecillas_9
+    21300020: Nubecillas_10
+    21300022: Nubecillas_11
+    21300024: Nubecillas_12
+    21300026: Nubecillas_13
+    21300028: Nubecillas_14
+    21300030: Nubecillas_15
+    21300032: Nubecillas_16
+    21300034: Nubecillas_17
+    21300036: Nubecillas_18
+    21300038: Nubecillas_19
+    21300040: Nubecillas_20
+    21300042: Nubecillas_21
+    21300044: Nubecillas_22
+    21300046: Nubecillas_23
+    21300048: Nubecillas_24
+    21300050: Nubecillas_25
+    21300052: Nubecillas_26
+    21300054: Nubecillas_27
+    21300056: Nubecillas_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nubecillas_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1871
+        width: 263
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1873
+        width: 263
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1876
+        width: 257
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1660
+        width: 258
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1664
+        width: 255
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_5
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1676
+        width: 258
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1480
+        width: 261
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_7
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1484
+        width: 254
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_8
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1496
+        width: 263
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1276
+        width: 260
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_10
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1308
+        width: 264
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1307
+        width: 256
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1095
+        width: 262
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_13
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1131
+        width: 258
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_14
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1124
+        width: 262
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 900
+        width: 253
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 928
+        width: 261
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_17
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 924
+        width: 254
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_18
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 720
+        width: 257
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_19
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 747
+        width: 264
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_20
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 744
+        width: 254
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_21
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 532
+        width: 256
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 548
+        width: 252
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_23
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 572
+        width: 261
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 356
+        width: 259
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_25
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 352
+        width: 257
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_26
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 176
+        width: 257
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_27
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 180
+        width: 260
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Nubecillas_28
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 10
+        width: 259
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

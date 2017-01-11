@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour {
     public Transform Enemigo;
     public Transform PosSpawn;
 
-    public float tiempoEntreSpawn = 2;
+    public float tiempoEntreSpawn = 4;
     public float tiempoUltimoSpawn = 0;
 
 
@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour {
 	    if (Time.time -tiempoUltimoSpawn > tiempoEntreSpawn)
         {
             Transform enemy = (Transform)Instantiate(Enemigo, PosSpawn.position, transform.rotation);
-            Destroy(enemy.gameObject, 4);
+            Destroy(enemy.gameObject, 5);
             tiempoUltimoSpawn = Time.time;
         }
 	}
