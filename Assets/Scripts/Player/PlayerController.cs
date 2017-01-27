@@ -33,6 +33,13 @@ public class PlayerController : MonoBehaviour {
     public Sprite iconoEnergia3; 
     public Sprite iconoEnergia4;
 
+    public AudioClip pain;
+    public AudioClip metalsound;
+    public AudioClip brokenblock;
+    public AudioClip jumpSound;
+    public AudioClip flashSound;
+
+
     private float energy;
     private int rompibleCount=0;
     public int contador = 0;
@@ -126,6 +133,8 @@ public class PlayerController : MonoBehaviour {
                 getButtonUpJump = false;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
                 animator.SetInteger("State", 2);
+                AudioSource.PlayClipAtPoint(jumpSound, Camera.main.transform.position);
+
             }
             if (flashing && !aproximacionRompible) //Cuando alcanza el suelo despues de salto flash
             {
@@ -147,6 +156,7 @@ public class PlayerController : MonoBehaviour {
             if (secondJump)
             {
                 animator.SetInteger("State", 2);
+                
                 if (getButtonDowmJump)
                 {
                     getButtonDowmJump = false;
@@ -158,6 +168,7 @@ public class PlayerController : MonoBehaviour {
 
                 if (getButtonUpJump && flashing)
                 {
+                    AudioSource.PlayClipAtPoint(flashSound, Camera.main.transform.position);
                     getButtonDowmJump = false;
                     getButtonUpJump = false;    //Nada que ver con las físicas, sirve para controlar estados.
                     initTimer = false;
@@ -167,6 +178,7 @@ public class PlayerController : MonoBehaviour {
                     currentPosition.z = 0;
                     if (!flashRoto)
                     {
+
                         Vector3 moveToward = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //Posicion del raton
                         moveDirection = moveToward - currentPosition; //Vector que va desde la posicion del objeto hasta el raton
                         moveDirection.z = 0;    //Ponemos a cero el z
@@ -240,6 +252,7 @@ public class PlayerController : MonoBehaviour {
         if (other.CompareTag("Interrogacion") /*|| other.CompareTag("Enemy")*/)  //http://answers.unity3d.com/questions/172975/only-check-collision-of-certain-collider.html
         {
             other.GetComponent<Animator>().SetBool("PlayerIn", true);
+            AudioSource.PlayClipAtPoint(metalsound, Camera.main.transform.position);
             if (lives != 0)
             {
                 lives--;
@@ -253,8 +266,9 @@ public class PlayerController : MonoBehaviour {
             {
                 //Destroy(this);
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("Test It! Level1");
+
                 UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-                Controlador.GetComponent<LoadXmlData>().Escribe(1,"Snake", 5,2);
+
             }
         }
 
@@ -264,6 +278,7 @@ public class PlayerController : MonoBehaviour {
             {
                 if (rompibleCount<2)
                 {
+                    AudioSource.PlayClipAtPoint(brokenblock, Camera.main.transform.position);
                     Destroy(other.gameObject);
                     rompibleCount++;
                     print(rompibleCount);
@@ -284,6 +299,7 @@ public class PlayerController : MonoBehaviour {
 
    public void ChangeLifeImage()
     {
+        AudioSource.PlayClipAtPoint(pain, Camera.main.transform.position);
         if (lives == 2)
             GameObject.Find("VidasTag").GetComponent<UnityEngine.UI.Image>().sprite = iconoVida0;
         if (lives == 1)

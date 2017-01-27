@@ -15,7 +15,7 @@ public class SaltoFlash : MonoBehaviour {
     {
         if (!done && other.tag == "Player")
         {
-            Controller.GetComponent<LoadXmlData>().Escribe(1, "Explicacion0-2", 5, 3);
+            Controller.GetComponent<LoadXmlData>().Escribe(1, "Explicacion0-2", 8, 3);
             done = true;
         }
     }

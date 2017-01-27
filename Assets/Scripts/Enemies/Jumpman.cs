@@ -11,6 +11,7 @@ public class Jumpman : MonoBehaviour
     public Sprite Jumping;
     public Sprite U2Dead;
     public bool vivo=true;
+    public AudioClip splash_dead;
 
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private int Direction = -1;
@@ -62,7 +63,8 @@ public class Jumpman : MonoBehaviour
                 if (other.GetComponent<PlayerController>().Flashing)
                 {
                     GetComponent<SpriteRenderer>().sprite = U2Dead;
-                    Destroy(this.gameObject, 2);
+                    Destroy(this.gameObject, 1);
+                    AudioSource.PlayClipAtPoint(splash_dead, Camera.main.transform.position);
 
                     vivo = false;
                 }

@@ -6,6 +6,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
     public float MaxSpeedHorizontal = 5f;
     public float MaxSpeedVertical = 10f;
+    public AudioClip splash_dead;
 
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private int Direction=-1;
@@ -42,6 +43,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
         {
             if (other.GetComponent<PlayerController>().Flashing)
             {
+                AudioSource.PlayClipAtPoint(splash_dead, Camera.main.transform.position);
                 Destroy(this.gameObject);
             }
             else

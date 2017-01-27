@@ -8,6 +8,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
     public float MaxSpeedHorizontal = 5f;
     public float MaxSpeedVertical = 10f;
     public bool NubeEspecial=false;
+    public AudioClip splash_dead;
 
     private bool facingRight = true;			// For determining which way the player is currently facing.
     private Vector2 Direction;
@@ -63,6 +64,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
         {
             if (other.GetComponent<PlayerController>().Flashing)
             {
+                AudioSource.PlayClipAtPoint(splash_dead, Camera.main.transform.position);
                 Destroy(this.gameObject);
                 if (NubeEspecial)
                 {
@@ -73,6 +75,7 @@ public class FlyingEnemyBehaviour : MonoBehaviour
             {
                 if (ataque == false)
                 {
+
                     player.GetComponent<PlayerController>().lives--;
                     player.GetComponent<PlayerController>().contador = 0;
                     player.GetComponent<PlayerController>().ChangeLifeImage();
